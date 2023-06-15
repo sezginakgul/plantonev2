@@ -8,6 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import plantoneGif from "./assets/plagif.gif";
 import plantoneVideo from "./assets/plantoneVideo.mp4";
+import plantone from "./assets/plantone.png";
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -778,7 +779,7 @@ function App() {
       <div className="contact-form">
         <div style={{ width: "65%", height: "100vh" }}>
           <img
-            src="http://www.getplantone.com/wp-content/themes/plantone_2018/images/plantone.jpg"
+            src={plantone}
             alt=""
             width={"100%"}
             height={"100%"}
