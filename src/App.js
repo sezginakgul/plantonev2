@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import plantoneGif from "./assets/plagif.gif";
+import plantoneVideo from "./assets/plantoneVideo.mp4";
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -571,6 +572,7 @@ function App() {
               className="video p-0 lazy"
               id="video"
               controls
+              autoPlay
               style={{
                 border: "none",
                 objectFit: "cover",
@@ -580,7 +582,7 @@ function App() {
               }}
             >
               <source
-                src=" http://www.getplantone.com/wp-content/themes/plantone_2018/This_is_plantone.mp4"
+                src={plantoneVideo}
                 type="video/mp4"
                 style={{ border: "none" }}
               />
