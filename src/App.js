@@ -9,6 +9,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import plantoneGif from "./assets/plagif.gif";
 import plantoneVideo from "./assets/plantoneVideo.mp4";
 import plantone from "./assets/plantone.png";
+import Spline from "@splinetool/react-spline";
 
 function App() {
   const [showNavbar, setShowNavbar] = useState(false);
@@ -115,7 +116,7 @@ function App() {
             0,
             Math.min(
               1,
-              (scrollPosition - wordRef.offsetTop) / window.innerHeight
+              (scrollPosition - wordRef.offsetTop) / window.innerHeight + 0.25
             )
           );
           wordRef.style.opacity = opacity.toString();
@@ -376,7 +377,7 @@ function App() {
                       type="text/css"
                       dangerouslySetInnerHTML={{
                         __html:
-                          "\n                            .st0 {\n                                clip-path: url(#SVGID_2_);\n                                fill: #3c4048;\n                            }\n\n                            .st1 {\n                                fill: #3c4048;\n                            }\n\n                            .st2 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #3c4048;\n                            }\n\n                            .st3 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #F58020;\n                            }\n\n                            .st4 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #279F48;\n                            }\n\n                            .st5 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #327BBF;\n                            }\n\n                            .st6 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #6C3895;\n                            }\n\n                            .st7 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #EE2A24;\n                            }\n                        ",
+                          "\n                            .st0 {\n                                clip-path: url(#SVGID_2_);\n                                fill: #000;\n                            }\n\n                            .st1 {\n                                fill: #000;\n                            }\n\n                            .st2 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #000;\n                            }\n\n                            .st3 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #F58020;\n                            }\n\n                            .st4 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #279F48;\n                            }\n\n                            .st5 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #327BBF;\n                            }\n\n                            .st6 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #6C3895;\n                            }\n\n                            .st7 {\n                                clip-path: url(#SVGID_4_);\n                                fill: #EE2A24;\n                            }\n                        ",
                       }}
                     />
                     <g>
@@ -547,14 +548,13 @@ function App() {
           }}
           className="first-paragraph"
         >
-          <span style={{ color: "#b2b2b2" }}>This</span>
+          <span style={{ color: "#000" }}>This</span>
           <br />
-          <span style={{ color: "#b2b2b2" }}>is</span>
+          <span style={{ color: "#000" }}>is</span>
           <br />
           <span
             style={{
-              // border: "1px solid #C7FFCA",
-              color: "#00abb3",
+              color: "rgba(0,150,10,1)",
             }}
           >
             PLANTONE
@@ -566,11 +566,12 @@ function App() {
           </a>
         </div>
       </div>
+
       <div className="second" id="second">
         <div className="logo-main">
           {showVideo ? (
             <video
-              className="video p-0 lazy"
+              className="video p-0"
               id="video"
               controls
               autoPlay
@@ -598,88 +599,16 @@ function App() {
             />
           )}
           <div className={showVideo ? "click-btn-active" : "click-btn"}>
-            <span style={{ color: "#00abb3" }}>Click Here</span>
+            <span style={{ color: "rgba(0,150,10,1)" }}>Click Here</span>
             <i
               className="fa-solid fa-circle-play fa-lg"
-              style={{ color: "#00abb3", cursor: "pointer" }}
+              style={{ color: "rgba(0,150,10,1)", cursor: "pointer" }}
               onClick={() => setShowVideo(!showVideo)}
             ></i>
           </div>
         </div>
       </div>
-      {/* <div className="third">
-        <p>
-          <span className="line" />
-        </p>
-        <div className="logo-main">
-          <img src={happy} id="happy-logo" alt="happy" />
-        </div>
-      </div> */}
 
-      {/* <div
-        style={{
-          margin: "5rem auto 0 ",
-          fontSize: "50px",
-          width: "700px",
-          textAlign: "center",
-        }}
-      >
-        <span>With</span>
-        <span> </span>
-        <span>its</span>
-        <span> </span>
-        <span>smart</span>
-        <span> </span>
-        <span>lighting</span>
-        <span> </span>
-        <span> and</span>
-        <span> </span>
-        <span> the</span>
-        <span> </span>
-        <span> patent</span>
-        <span> </span>
-        <span> pending</span>
-        <span> </span>
-        <span> auto</span>
-        <span> </span>
-        <span> watering</span>
-        <span> </span>
-        <span> system,</span>
-        <span> </span>
-        <span> Plantone</span>
-        <span> </span>
-        <span>is</span>
-        <span> </span>
-        <span>a</span>
-        <span> </span>
-        <span> one</span>
-        <span> </span>
-        <span> product</span>
-        <span> </span>
-        <span> solution</span>
-        <span> </span>
-        <span> for</span>
-        <span> </span>
-        <span> anyone</span>
-        <span> </span>
-        <span> to</span>
-        <span> </span>
-        <span> easily</span>
-        <span> </span>
-        <span> grow</span>
-        <span> </span>
-        <span> herbs</span>
-        <span> </span>
-        <span> and</span>
-        <span> </span>
-        <span> flowers</span>
-        <span> </span>
-        <span> Plantone</span>
-        <span> </span>
-        <span> indoors.</span>
-        <span> </span>
-        <br />
-      </div> */}
       <br />
       <br />
       <br />
@@ -704,7 +633,8 @@ function App() {
                 display: "inline-block",
                 marginRight: "1rem",
                 fontWeight: "bolder",
-                color: "#B2B2B2",
+                color: "#000",
+                opacity: 0,
               }}
             >
               {word}
@@ -808,6 +738,66 @@ function App() {
             <button type="submit">Send</button>
           </form>
         </div>
+      </div>
+
+      {/* <div
+        style={{
+          height: "100vh",
+          width: "100vw",
+          // backgroundColor: "#000",
+          color: "#fff",
+        }}
+      > */}
+      {/* <div> */}
+      {/* Button trigger modal */}
+      {/* <button
+            type="button"
+            className="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Launch demo modal
+          </button> */}
+      {/* Modal */}
+      {/* <div
+            className="modal fade"
+            id="exampleModal"
+            tabIndex={-1}
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog modal-dialog-centered modal-xl">
+              <div className="modal-content">
+                <video
+                  className="video p-0"
+                  id="video"
+                  controls
+                  style={{
+                    border: "none",
+                    // borderRadius: "10px",
+                    objectFit: "cover",
+                    width: "100%",
+                    height: "100%",
+                    // position: "relative",
+                  }}
+                >
+                  <source
+                    src={plantoneVideo}
+                    type="video/mp4"
+                    style={{ border: "none" }}
+                  />
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> */}
+
+      <div style={{ height: "100vh", width: "100vw", marginBottom: "5rem" }}>
+        <Spline
+          scene="https://prod.spline.design/VPvCkE4sSWeSw8n9/scene.splinecode"
+          width="100%"
+        />
       </div>
     </div>
   );
